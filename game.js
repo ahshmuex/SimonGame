@@ -14,6 +14,14 @@ $("body").keypress(function() {
  }
 });
 
+$("body").on("tap", function() {
+  if (!gameStarted) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+  gameStarted = true;
+ }
+});
+
 //new level sequence
 function nextSequence() {
   userClickedPattern = [];
